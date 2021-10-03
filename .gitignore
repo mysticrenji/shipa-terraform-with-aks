@@ -1,0 +1,8 @@
+.env
+**/.terraform/*
+**.terraform*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.crt
