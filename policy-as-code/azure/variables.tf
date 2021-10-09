@@ -11,6 +11,8 @@ variable "shipatoken" {}
 
 variable "applicationname" {}
 
+variable "security_flag" {}
+
 variable "appdescription" {}
 
 variable "dockerimage" {}

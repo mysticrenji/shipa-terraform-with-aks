@@ -4,7 +4,7 @@ provider "shipa" {
 }
 
 # Module for dev - policy as code
-module "policy-as-code-dev" {
+module "policy-as-code" {
   source          = "./modules/policy-as-code"
   teamname        = var.teamname
   teamtag         = var.teamtag
@@ -15,10 +15,11 @@ module "policy-as-code-dev" {
   cluster_address = var.cluster_address
   cluster_ca_path = var.cluster_ca_path
   cluster_token   = var.cluster_token
+  security_flag   = var.security_flag
 }
 
 # Module for dev - app deploy
-module "app-deploy-dev" {
+module "app-deploy" {
   source          = "./modules/app-deploy"
   teamname        = var.teamname
   teamtag         = var.teamtag
@@ -26,5 +27,5 @@ module "app-deploy-dev" {
   applicationname = var.applicationname
   appdescription  = var.appdescription
   dockerimage     = var.dockerimage
-  depends_on      = [module.policy-as-code-dev]
+  depends_on      = [module.policy-as-code]
 }

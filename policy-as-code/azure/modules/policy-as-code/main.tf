@@ -29,8 +29,8 @@ resource "shipa_framework" "framework" {
           default = false
         }
         security {
-          disable_scan         = true
-          scan_platform_layers = false
+          disable_scan         = var.security_flag
+          scan_platform_layers = var.security_flag
         }
         router = "traefik"
         app_quota {
