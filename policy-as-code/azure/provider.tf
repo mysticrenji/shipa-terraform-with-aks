@@ -6,7 +6,7 @@ terraform {
     }
 
     shipa = {
-      version = "0.0.5"
+      version = "0.0.18"
       source  = "shipa-corp/shipa"
 
     }
